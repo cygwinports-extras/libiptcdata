@@ -1,0 +1,125 @@
+libiptcdata
+------------------------------------------
+libiptcdata is a library for manipulating the International Press
+Telecommunications Council (IPTC) metadata stored within multimedia
+files such as images.  The library provides routines for parsing,
+viewing, modifying, and saving this metadata.  The library is licensed
+under the GNU Library General Public License (GNU LGPL).
+
+The library implements the standard described at http://www.iptc.org/IIM.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  libiconv2-1.11-1
+  libintl8-0.15-1
+(python-iptcdata)
+  python-2.5.1-3
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  bison-2.3-1
+  cygport-0.3.5-1
+  flex-2.5.33-2
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://libiptcdata.sourceforge.net/
+
+Canonical download:
+  http://downloads.sourceforge.net/libiptcdata/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libiptcdata-1.0.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libiptcdata-1.0.2-X.cygport all
+
+This will create:
+  /usr/src/libiptcdata-1.0.2-X-src.tar.bz2
+  /usr/src/libiptcdata-1.0.2-X.tar.bz2
+  /usr/src/libiptcdata-devel-1.0.2-X.tar.bz2
+  /usr/src/libiptcdata0-1.0.2-X.tar.bz2
+  /usr/src/python-iptcdata-1.0.2-1.cygport
+
+-------------------------------------------
+
+Files included in the binary package:
+
+(libiptcdata)
+  /usr/bin/iptc.exe
+  /usr/share/doc/Cygwin/libiptcdata-1.0.2.README
+  /usr/share/doc/libiptcdata-1.0.2/ABOUT-NLS
+  /usr/share/doc/libiptcdata-1.0.2/AUTHORS
+  /usr/share/doc/libiptcdata-1.0.2/COPYING
+  /usr/share/doc/libiptcdata-1.0.2/ChangeLog
+  /usr/share/doc/libiptcdata-1.0.2/INSTALL
+  /usr/share/doc/libiptcdata-1.0.2/NEWS
+  /usr/share/doc/libiptcdata-1.0.2/README
+  /usr/share/doc/libiptcdata-1.0.2/TODO
+
+(libiptcdata0)
+  /usr/bin/cygiptcdata-0.dll
+
+(libiptcdata-devel)
+  /usr/include/libiptcdata/_stdint.h
+  /usr/include/libiptcdata/iptc-data.h
+  /usr/include/libiptcdata/iptc-dataset.h
+  /usr/include/libiptcdata/iptc-jpeg.h
+  /usr/include/libiptcdata/iptc-log.h
+  /usr/include/libiptcdata/iptc-mem.h
+  /usr/include/libiptcdata/iptc-tag.h
+  /usr/include/libiptcdata/iptc-utils.h
+  /usr/lib/libiptcdata.dll.a
+  /usr/lib/libiptcdata.la
+  /usr/lib/pkgconfig/libiptcdata.pc
+  /usr/share/gtk-doc/html/libiptcdata/ch01.html
+  /usr/share/gtk-doc/html/libiptcdata/ch02.html
+  /usr/share/gtk-doc/html/libiptcdata/ch03.html
+  /usr/share/gtk-doc/html/libiptcdata/home.png
+  /usr/share/gtk-doc/html/libiptcdata/index.html
+  /usr/share/gtk-doc/html/libiptcdata/index.sgml
+  /usr/share/gtk-doc/html/libiptcdata/iptc-about.html
+  /usr/share/gtk-doc/html/libiptcdata/iptc-commandline.html
+  /usr/share/gtk-doc/html/libiptcdata/iptc-i18n.html
+  /usr/share/gtk-doc/html/libiptcdata/iptc-libjpeg.html
+  /usr/share/gtk-doc/html/libiptcdata/iptc-overview.html
+  /usr/share/gtk-doc/html/libiptcdata/left.png
+  /usr/share/gtk-doc/html/libiptcdata/libiptcdata-data.html
+  /usr/share/gtk-doc/html/libiptcdata/libiptcdata-dataset.html
+  /usr/share/gtk-doc/html/libiptcdata/libiptcdata-jpeg.html
+  /usr/share/gtk-doc/html/libiptcdata/libiptcdata-log.html
+  /usr/share/gtk-doc/html/libiptcdata/libiptcdata-mem.html
+  /usr/share/gtk-doc/html/libiptcdata/libiptcdata-tag.html
+  /usr/share/gtk-doc/html/libiptcdata/libiptcdata-utils.html
+  /usr/share/gtk-doc/html/libiptcdata/libiptcdata.devhelp
+  /usr/share/gtk-doc/html/libiptcdata/libiptcdata.devhelp2
+  /usr/share/gtk-doc/html/libiptcdata/right.png
+  /usr/share/gtk-doc/html/libiptcdata/style.css
+  /usr/share/gtk-doc/html/libiptcdata/up.png
+
+(python-iptcdata)
+  /usr/lib/python2.5/site-packages/iptcdata.dll
+  /usr/lib/python2.5/site-packages/iptcdata.la
+
+------------------
+
+Port Notes:
+
+----- version 1.0.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

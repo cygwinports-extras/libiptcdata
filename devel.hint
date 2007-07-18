@@ -1,0 +1,11 @@
+category: Graphics
+requires: cygwin gettext
+external-source: libiptcdata
+sdesc: "IPTC metadata library (development)"
+ldesc: "libiptcdata is a library for manipulating the International 
+Press Telecommunications Council (IPTC) metadata stored within 
+multimedia files such as images.  The library provides routines for 
+parsing, viewing, modifying, and saving this metadata.  The library is 
+licensed under the GNU Library General Public License (GNU LGPL).
+
+The library implements the standard described at http://www.iptc.org/IIM."
