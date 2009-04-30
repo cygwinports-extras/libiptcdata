@@ -1,0 +1,18 @@
+inherit python gnome2
+
+DESCRIPTION="IPTC metadata library"
+HOMEPAGE="http://libiptcdata.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+PATCH_URI="1.0.2-no-undefined.patch"
+
+PKG_NAMES="${PN} ${PN}0 ${PN}-devel python-${PN#lib}"
+PKG_HINTS="setup lib devel python"
+libiptcdata_CONTENTS='usr/bin/*.exe usr/share/doc/ usr/share/locale/*/*/iptc.mo'
+libiptcdata0_CONTENTS="usr/bin/*-0.dll usr/share/locale/*/*/libiptcdata.mo"
+libiptcdata_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+python_iptcdata_CONTENTS="${PYTHON_SITELIB#/}"
+
+DIFF_EXCLUDES="m4"
+
+ACLOCAL_FLAGS="-I m4"
+CYGCONF_ARGS="--enable-python"

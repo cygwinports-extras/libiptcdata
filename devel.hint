@@ -1,5 +1,5 @@
 category: Graphics
-requires: cygwin gettext
+requires: cygwin libiptcdata0 gettext
 external-source: libiptcdata
 sdesc: "IPTC metadata library (development)"
 ldesc: "libiptcdata is a library for manipulating the International 

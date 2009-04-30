@@ -9,26 +9,26 @@ under the GNU Library General Public License (GNU LGPL).
 The library implements the standard described at http://www.iptc.org/IIM.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  libiconv2-1.11-1
-  libintl8-0.15-1
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libiconv2-1.12-10
+  libintl8-0.17-10
 (python-iptcdata)
-  python-2.5.1-3
+  python-2.5.4-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
+  binutils-20080624-2
   bison-2.3-1
-  cygport-0.3.5-1
-  flex-2.5.33-2
-  gawk-3.1.5-4
-  gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
-  make-3.81-1
-  pkg-config-0.21-1
+  cygport-0.9.6-1
+  flex-2.5.35-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  libtool-2.2.7a-12
+  make-3.81-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -40,18 +40,18 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libiptcdata-1.0.2-X-src.tar.bz2
+  unpack libiptcdata-1.0.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libiptcdata-1.0.2-X.cygport all
+  cygport ./libiptcdata-1.0.3-X.cygport all
 
 This will create:
-  /usr/src/libiptcdata-1.0.2-X-src.tar.bz2
-  /usr/src/libiptcdata-1.0.2-X.tar.bz2
-  /usr/src/libiptcdata-devel-1.0.2-X.tar.bz2
-  /usr/src/libiptcdata0-1.0.2-X.tar.bz2
-  /usr/src/python-iptcdata-1.0.2-1.cygport
+  /usr/src/libiptcdata-1.0.3-X-src.tar.bz2
+  /usr/src/libiptcdata-1.0.3-X.tar.bz2
+  /usr/src/libiptcdata-devel-1.0.3-X.tar.bz2
+  /usr/src/libiptcdata0-1.0.3-X.tar.bz2
+  /usr/src/python-iptcdata-1.0.3-1.cygport
 
 -------------------------------------------
 
@@ -59,18 +59,17 @@ Files included in the binary package:
 
 (libiptcdata)
   /usr/bin/iptc.exe
-  /usr/share/doc/Cygwin/libiptcdata-1.0.2.README
-  /usr/share/doc/libiptcdata-1.0.2/ABOUT-NLS
-  /usr/share/doc/libiptcdata-1.0.2/AUTHORS
-  /usr/share/doc/libiptcdata-1.0.2/COPYING
-  /usr/share/doc/libiptcdata-1.0.2/ChangeLog
-  /usr/share/doc/libiptcdata-1.0.2/INSTALL
-  /usr/share/doc/libiptcdata-1.0.2/NEWS
-  /usr/share/doc/libiptcdata-1.0.2/README
-  /usr/share/doc/libiptcdata-1.0.2/TODO
+  /usr/share/doc/libiptcdata/AUTHORS
+  /usr/share/doc/libiptcdata/COPYING
+  /usr/share/doc/libiptcdata/ChangeLog
+  /usr/share/doc/libiptcdata/NEWS
+  /usr/share/doc/libiptcdata/README
+  /usr/share/doc/libiptcdata/TODO
+  /usr/share/locale/de/LC_MESSAGES/iptc.mo
 
 (libiptcdata0)
   /usr/bin/cygiptcdata-0.dll
+  /usr/share/locale/de/LC_MESSAGES/libiptcdata.mo
 
 (libiptcdata-devel)
   /usr/include/libiptcdata/_stdint.h
@@ -117,8 +116,8 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 1.0.2-1 -----
-Initial release for Cygwin.
+----- version 1.0.3-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
