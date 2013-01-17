@@ -1,15 +1,24 @@
 inherit python gnome2
 
-DESCRIPTION="IPTC metadata library"
+NAME="libiptcdata"
+VERSION=1.0.4
+RELEASE=3
+CATEGORY="Graphics"
+SUMMARY="IPTC metadata library"
+DESCRIPTION="libiptcdata is a library for manipulating the International Press
+Telecommunications Council (IPTC) metadata stored within multimedia files such
+as images.  The library provides routines for parsing, viewing, modifying, and
+saving this metadata."
 HOMEPAGE="http://libiptcdata.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 PATCH_URI="1.0.2-no-undefined.patch"
 
 PKG_NAMES="${PN} ${PN}0 ${PN}-devel python-${PN#lib}"
-PKG_HINTS="setup lib devel python"
 libiptcdata_CONTENTS='usr/bin/*.exe usr/share/doc/ usr/share/locale/*/*/iptc.mo'
 libiptcdata0_CONTENTS="usr/bin/*-0.dll usr/share/locale/*/*/libiptcdata.mo"
 libiptcdata_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+python_iptcdata_CATEGORY="Python"
+python_iptcdata_SUMMARY="${SUMMARY} (Python bindings)"
 python_iptcdata_CONTENTS="${PYTHON_SITELIB#/}"
 
 DIFF_EXCLUDES="m4"
