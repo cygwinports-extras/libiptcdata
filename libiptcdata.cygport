@@ -10,18 +10,27 @@ Telecommunications Council (IPTC) metadata stored within multimedia files such
 as images.  The library provides routines for parsing, viewing, modifying, and
 saving this metadata."
 HOMEPAGE="http://libiptcdata.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/libiptcdata/${NAME}-${VERSION}.tar.gz"
 PATCH_URI="1.0.2-no-undefined.patch"
 
-PKG_NAMES="${PN} ${PN}0 ${PN}-devel python-${PN#lib}"
+PKG_NAMES="${NAME} ${NAME}0 ${NAME}-devel ${NAME}-doc python-iptcdata"
 libiptcdata_CONTENTS='usr/bin/*.exe usr/share/doc/ usr/share/locale/*/*/iptc.mo'
+libiptcdata0_CATEGORY="Libs"
 libiptcdata0_CONTENTS="usr/bin/*-0.dll usr/share/locale/*/*/libiptcdata.mo"
-libiptcdata_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+libiptcdata_devel_CATEGORY="Libs"
+libiptcdata_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+libiptcdata_doc_CATEGORY="Doc"
+libiptcdata_doc_CONTENTS="usr/share/gtk-doc/"
 python_iptcdata_CATEGORY="Python"
 python_iptcdata_SUMMARY="${SUMMARY} (Python bindings)"
 python_iptcdata_CONTENTS="${PYTHON_SITELIB#/}"
 
-DIFF_EXCLUDES="m4"
-
-ACLOCAL_FLAGS="-I m4"
-CYGCONF_ARGS="--enable-python"
+src_compile() {
+	cd ${S}
+	ACLOCAL_FLAGS="-I m4" \
+	gnome2_autoreconf
+	cp -f po/Makefile.in.in iptc/po/
+	cd ${B}
+	gnome2_configure --enable-python
+	cygmake
+}
