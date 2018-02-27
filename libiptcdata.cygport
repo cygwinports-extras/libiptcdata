@@ -1,8 +1,8 @@
-inherit python gnome2
+inherit python2 gnome2
 
 NAME="libiptcdata"
 VERSION=1.0.4
-RELEASE=3
+RELEASE=4
 CATEGORY="Graphics"
 SUMMARY="IPTC metadata library"
 DESCRIPTION="libiptcdata is a library for manipulating the International Press
@@ -13,17 +13,17 @@ HOMEPAGE="http://libiptcdata.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libiptcdata/${NAME}-${VERSION}.tar.gz"
 PATCH_URI="1.0.2-no-undefined.patch"
 
-PKG_NAMES="${NAME} ${NAME}0 ${NAME}-devel ${NAME}-doc python-iptcdata"
-libiptcdata_CONTENTS='usr/bin/*.exe usr/share/doc/ usr/share/locale/*/*/iptc.mo'
+PKG_NAMES="iptc ${NAME}0 ${NAME}-devel ${NAME}-doc python2-iptcdata"
+iptc_CONTENTS='usr/bin/*.exe usr/share/locale/*/*/iptc.mo'
 libiptcdata0_CATEGORY="Libs"
-libiptcdata0_CONTENTS="usr/bin/*-0.dll usr/share/locale/*/*/libiptcdata.mo"
+libiptcdata0_CONTENTS="usr/bin/*-0.dll usr/share/doc/ usr/share/locale/*/*/libiptcdata.mo"
 libiptcdata_devel_CATEGORY="Libs"
 libiptcdata_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
 libiptcdata_doc_CATEGORY="Doc"
 libiptcdata_doc_CONTENTS="usr/share/gtk-doc/"
-python_iptcdata_CATEGORY="Python"
-python_iptcdata_SUMMARY="${SUMMARY} (Python bindings)"
-python_iptcdata_CONTENTS="${PYTHON_SITELIB#/}"
+python2_iptcdata_CATEGORY="Python"
+python2_iptcdata_SUMMARY="${SUMMARY} (Python bindings)"
+python2_iptcdata_CONTENTS="${PYTHON2_SITELIB#/}"
 
 src_compile() {
 	cd ${S}
